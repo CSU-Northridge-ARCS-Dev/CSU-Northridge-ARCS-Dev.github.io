@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Boracle Platform - Senior Design Team</title>
+    <meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- stylesheet css -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/nivo-lightbox.css">
+	<link rel="stylesheet" href="../css/nivo_themes/default/default.css">
+	<link rel="stylesheet" href="../css/templatemo-style.css">
+	<!-- google web font css -->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	
+<!-- navigation -->
+	<div class="container">
+		<div class="navbar navbar-default navbar-static-top" role="navigation">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="https://www.csun.edu" class="navbar-brand"><img src="../images/CSUN-logo.png" class="img-responsive" alt="logo" width="120"></a> <a href="https://www.sandbox.csun.edu/~xjiang/SeniorDesign"><h5 style="display: inline-block; font-size: 18px;">Senior Design Project</h5></a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../index.html">HOME</a></li>
+				<li><a href="../platform/index.html" class="active">PLATFORM</a></li>
+				<li><a href="../marketplace/index.html">MARKETPLACE</a></li>
+				<li><a href="../about.html">ABOUT US</a></li>
+				<li><a href="../gallery.html">GALLERY</a></li>
+				<li><a href="../contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+</div>		
+
+<!-- home section -->
+<div id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-sm-3"></div>
+			<div class="col-md-7 col-sm-9">
+				<h3>Boracle Marketplace</h3>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- feature section -->
+
+<div class="team" id="content">
+	<div class="container">
+		<div class="row text-center" style="margin: 10px 0px;">
+			<h2>User Account Management - Chris</h2>
+		</div>
+		<div class="row" style="margin: 20px 20px;">
+            <p>I created 3 Components to handle the integration of accounts within the marketplace:</p>
+
+            <h3>1. SignInWithEmail</h3>
+
+            <p>A component to handle users who sign in with their email accounts. This component initializes state variables for email, password, and error using the useState hook. These variables are used to store the user's input and any error messages.</p>
+
+            <p>It uses the useNavigate hook from react-router-dom to get a function that can be used to navigate to different routes in the application. It gets a reference to the Firebase authentication service using the getAuth function. It defines a handleSubmit function that is called when the form is submitted. This function prevents the default form submission behavior, clears any existing errors, and then attempts to sign in the user with their email and password using the signInWithEmailAndPassword function from Firebase. If the sign-in is successful, the user is redirected to the /profile page. If there's an error, the error message is stored in the error state variable. In the render method, it displays a title, an error message if there is one, and a form. The form's onSubmit prop is set to the handleSubmit function, so this function will be called when the form is submitted.</p>
+
+            <h3>2. SignInWithGoogle</h3>
+
+            <p>A component to handle user sign in with google accounts. The component initializes state variables for error and loading using the useState hook. The error variable is used to store any error messages, and the loading variable is used to indicate whether the sign-in process is ongoing.</p>
+
+            <p>It uses the useNavigate hook from react-router-dom to get a function that can be used to navigate to different routes in the application. It defines a signInWithGoogle function that is called when the "Sign In with Google" button is clicked. This function sets loading to true, creates a new GoogleAuthProvider, and then attempts to sign in the user using the signInWithPopup function from Firebase. If the sign-in is successful, the user is redirected to the /profile page. If there's an error, the error message is stored in the error state variable. Regardless of whether the sign-in is successful or not, loading is set to false at the end. In the render method, it displays a button that, when clicked, calls the signInWithGoogle function. The button is disabled while loading is true. The button's text changes to "Signing in..." while loading is true and changes back to "Sign In with Google" when loading is false. If there's an error, an error message is displayed below the button.</p>
+
+            <h3>3. SignUpWithEmail</h3>
+
+            <p>This component is used to allow users to add their credentials so they may login with email. It initializes state variables for email, password, error, and successMessage using the useState hook. These variables are used to store the user's input, any error messages, and success messages.</p>
+
+            <p>It uses the useNavigate hook from react-router-dom to get a function that can be used to navigate to different routes in the application. It gets a reference to the Firebase authentication service using the getAuth function. It defines a handleSubmit function that is called when the form is submitted. This function prevents the default form submission behavior, clears any existing errors and success messages, and then attempts to create a new user with their email and password using the createUserWithEmailAndPassword function from Firebase. If the account creation is successful, a success message is displayed and the user is redirected to the /profile page after a short delay. If there's an error, the error message is stored in the error state variable.</p>
+        </div>
+        <div class="row" style="margin: 20px 10px;">
+            <a href="index.html#features">Back to Marketplace</a>
+        </div>
+	</div>
+</div>
+
+<!-- footer section -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-4">
+                                <img src="../images/CSUN-logo.png" class="img-responsive" alt="logo" width="200">
+                        </div>
+
+                        <div class="col-md-5 col-sm-4">
+                                <p><i class="fa fa-envelope-o"> 18111 Nordhoff Street, Northridge, CA 91330</i></p>
+                                <p><i class="fa fa-phone"></i> (818) 677-1200</p>
+                                <p><i class="fa fa-globe"></i><a href="../https://www.csun.edu">www.csun.edu</a></p>
+                        </div>
+            
+                        <div class="col-md-4 col-sm-5">
+                                <ul class="social-icons">
+                                        <li><a href="../https://www.facebook.com/calstatenorthridge/" class="fa fa-facebook"></a></li>
+                                        <li><a href="../https://twitter.com/csunorthridge" class="fa fa-twitter"></a></li>
+                                        <li><a href="../https://www.linkedin.com/school/california-state-university-northridge/" class="fa fa-linkedin-square"></a></li>
+                                        <li><a href="../https://www.instagram.com/csun_edu/" class="fa fa-instagram"></a></li>
+                                </ul>
+                        </div>
+            
+		</div>
+	</div>
+</footer>
+
+<!-- copyright section -->
+<div class="copyright">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-6"></div>
+			<div class="col-md-6 col-sm-6">
+				<p>Copyright &#169 California State University, Northridge</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- javascript js -->	
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>	
+<script src="../js/nivo-lightbox.min.js"></script>
+<script src="../js/custom.js"></script>
+
+</body>
+</html>

@@ -68,22 +68,22 @@
 				<p>Our tech stack uses Spring Boot, Java, and the Firestore realtime database for the backend services. React Native is utilized for the cross-platform application.</p>
 			</div>			
 			<div class="col-md-6 col-sm-6">
-				<strong>JAVA</strong>
+				<strong><a href="https://www.java.com/en/">JAVA</a></strong>
 				<span class="pull-right">100%</span>
 					<div class="progress">
 						<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
 					</div>
-				<strong>SPRING BOOT</strong>
+				<strong><a href="https://spring.io/projects/spring-boot">SPRING BOOT</a></strong>
 				<span class="pull-right">80%</span>
 					<div class="progress">
 						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
 					</div>
-				<strong>REACT NATIVE</strong>
+				<strong><a href="https://reactnative.dev/">REACT NATIVE</a></strong>
 				<span class="pull-right">70%</span>
 					<div class="progress">
 						<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
 					</div>
-				<strong>FIRESTORE</strong>
+				<strong><a href="https://firebase.google.com/docs/firestore">FIRESTORE</a></strong>
 				<span class="pull-right">80%</span>
 					<div class="progress">
 						<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
@@ -96,29 +96,9 @@
 	</div>
 </div>		
 
-
-<!-- architecture section -->
-
-<div class="team">
-	<div class="container">
-		<div class="row text-center">
-			<h2 style="margin-bottom: 50px">Boracle Platform Architecture</h2>
-		</div>
-		<div class="row">
-			<img src="../images/platform/architecture.jpg">
-		</div>
-		<div class="row">
-			<p class="text-center">Explanation about the Boracle Platform Architecture.</p>
-		</div>
-		<div class="col-md-12 col-sm-12">
-			<hr style="margin-top: 50px; margin-bottom: 0px">
-		</div>		
-	</div>
-</div>
-
 <!-- features section -->
 
-<div class="divider">
+<div id="features" class="divider">
 	<div class="container">
 		<div class="row">
 			<h2 style="margin-bottom: 50px">Boracle Platform Features</h2>
@@ -162,6 +142,44 @@
 					<h3><a href="data_sharing.html" style="color: #e0e0e0;">Data Sharing</a></h3>
 				</div>
 			</div>
+			<div class="col-md-12 col-sm-12">
+				<hr style="margin: 25px 0px">
+			</div>		
+		</div>
+	</div>
+</div>
+
+<!-- architecture section -->
+
+<div class="team">
+	<div class="container">
+		<div class="row text-center">
+			<h2 style="margin-bottom: 50px">Boracle Platform Architecture</h2>
+		</div>
+		<div class="row">
+			<img src="../images/platform/architecture.png">
+		</div>
+		<div class="row" style="margin: 30px 10px;">
+			<p>The Boracle Platform has two main components: the middleman pairing application and the backend microservices. The middleman application is responsible for the collection of sensor data from smart devices. The singular collection point, on a cross-platform mobile app, helps simplify data collection for developers and device manufacturers. Once the data is collected from the devices, data is synchronized and prepared for batch sending to the backend of the Boracle Platform.</p>
+			<p style="margin-top: 10px;">The backend of the Boracle Platform contains an API layer which communicates with microservices. An API request to store data will first save a copy of the raw data. The processing microservice will then process the raw data into a standardized format and remove outliers. The transformation layer will add additional information that could be calculated from the original standardized sensor information. Finally, the transformed data is moved to storage microservice and saved in a cleaned database.</p>
+			<p style="margin-top: 10px;">The API may also be used by third party developers to access data for a specific user. Some security mechanism will deny unauthorized requests. In future plans for Boracle, we also wish to generate data analytics and allow users to view those analytics through the mobile pairing application.</p>
+		</div>
+		<div class="col-md-12 col-sm-12">
+			<hr style="margin: 25px 0px">
+		</div>		
+	</div>
+</div>
+
+<!-- demo section -->
+
+
+<div class="team">
+	<div class="container">
+		<div class="row text-center">
+			<h2 style="margin-bottom: 20px">Boracle Marketplace Demo</h2>
+		</div>
+		<div class="row">
+			<p class="text-center" style="margin-bottom: 50px">Coming soon!</p>
 		</div>
 	</div>
 </div>
